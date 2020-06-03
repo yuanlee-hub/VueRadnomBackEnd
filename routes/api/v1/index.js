@@ -13,5 +13,6 @@ router.use(cookieParser(), async(req, res, next) => {
 
 // Cookie
 router.use('/cookie', require('./cookie'))
+router.use('/qrcode', require('./qrcode'))
 
 module.exports = router
