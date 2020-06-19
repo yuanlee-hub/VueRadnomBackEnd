@@ -2,7 +2,7 @@ const path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
-const port = 6200
+const port = 3602
 
 app.use(express.static(path.join(__dirname, 'static')))
 app.use(bodyParser.urlencoded({extended: false}))
