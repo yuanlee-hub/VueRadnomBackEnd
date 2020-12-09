@@ -22,6 +22,29 @@ router.get('/', async(req, res, next) => {
   })
 })
 
+router.get('/responsePayload', (req, res) => {
+  const data = []
+  const now = Date.now()
+  for (let i = 0; i < 10000 * 283; i++) {
+    data.push({
+      id: i,
+      name: `userName-${i}`,
+      age: 20,
+      sex: 'M',
+      height: 180,
+      width: 160,
+      signUp: now,
+      lastLoginTime: now,
+      createdAt: now,
+      updatedAt: now
+    })
+  }
+  res.send({
+    code: 0,
+    data
+  })
+})
+
 router.post('/', bodyParser(), async(req, res, next) => {
   const body = req.body
   console.log('req>json>body:')
